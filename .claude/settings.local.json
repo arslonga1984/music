@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /c/Users/ecoto/music_quiz/docs/*.md)",
+      "Bash(python3 -c ':*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(pnpm create:*)",
+      "Bash(printf \"N\\\\nN\\\\n\")",
+      "Bash(printf \"\\\\n\\\\n\")",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-git --import-alias \"@/*\" --no-react-compiler --no-agents-md)",
+      "Bash(taskkill /F /IM \"node.exe\")"
+    ]
+  }
+}
