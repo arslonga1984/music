@@ -19,7 +19,7 @@ declare global {
           }
         }
       ) => YTPlayer
-      PlayerState: { PLAYING: number; PAUSED: number; ENDED: number }
+      PlayerState: { PLAYING: number; PAUSED: number; ENDED: number; BUFFERING: number }
     }
     onYouTubeIframeAPIReady?: () => void
   }
@@ -72,12 +72,12 @@ function loadYouTubeApi(): Promise<void> {
 export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
   const playerRef = useRef<YTPlayer | null>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const pendingPlayRef = useRef(false)  // 모바일: 버퍼링 후 재생 대기 여부
   const [isReady, setIsReady] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     loadYouTubeApi().then(() => {
-      // 숨겨진 플레이어 div가 있어야 Player를 생성할 수 있음
       const player = new window.YT.Player(containerId, {
         height: '1',
         width: '1',
@@ -86,8 +86,7 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
           controls: 0,
           modestbranding: 1,
           rel: 0,
-          playsinline: 1,   // iOS 인라인 재생 필수
-          origin: window.location.origin,
+          playsinline: 1,  // iOS 인라인 재생 필수
         },
         events: {
           onReady: () => {
@@ -95,8 +94,17 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
             setIsReady(true)
           },
           onStateChange: (event) => {
-            const playing = event.data === window.YT.PlayerState.PLAYING
-            setIsPlaying(playing)
+            const { PLAYING, BUFFERING } = window.YT.PlayerState
+            // 모바일에서 BUFFERING 후 playVideo() 호출
+            if (event.data === BUFFERING && pendingPlayRef.current) {
+              player.playVideo()
+            }
+            if (event.data === PLAYING) {
+              pendingPlayRef.current = false
+              setIsPlaying(true)
+            } else {
+              setIsPlaying(false)
+            }
           },
         },
       })
@@ -108,18 +116,19 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
     }
   }, [containerId])
 
-  // videoId의 앞 seconds초만 재생하고 자동으로 멈춤
   const playSnippet = useCallback(
     (videoId: string, seconds: number) => {
       if (!playerRef.current) return
 
       if (timerRef.current) clearTimeout(timerRef.current)
 
-      // loadVideoById는 자동으로 재생 시작 — 별도 playVideo() 불필요
+      // loadVideoById + playVideo 조합: 데스크탑/모바일 모두 대응
+      pendingPlayRef.current = true
       playerRef.current.loadVideoById(videoId, 0)
-      setIsPlaying(true)
+      playerRef.current.playVideo()
 
       timerRef.current = setTimeout(() => {
+        pendingPlayRef.current = false
         playerRef.current?.pauseVideo()
         setIsPlaying(false)
       }, seconds * 1000)
