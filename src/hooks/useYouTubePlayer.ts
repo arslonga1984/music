@@ -86,6 +86,8 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
           controls: 0,
           modestbranding: 1,
           rel: 0,
+          playsinline: 1,   // iOS 인라인 재생 필수
+          origin: window.location.origin,
         },
         events: {
           onReady: () => {
@@ -113,8 +115,8 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
 
       if (timerRef.current) clearTimeout(timerRef.current)
 
+      // loadVideoById는 자동으로 재생 시작 — 별도 playVideo() 불필요
       playerRef.current.loadVideoById(videoId, 0)
-      playerRef.current.playVideo()
       setIsPlaying(true)
 
       timerRef.current = setTimeout(() => {

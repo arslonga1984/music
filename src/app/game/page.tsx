@@ -119,8 +119,11 @@ function GameScreen({
 
   return (
     <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-6 gap-6">
-      {/* YouTube 플레이어 컨테이너 - 모바일 재생을 위해 sr-only 사용 (display:none 금지) */}
-      <div id={playerContainerId} className="sr-only" />
+      {/* YouTube 플레이어 컨테이너 - display:none/clip 금지, 화면 밖 절대 위치 */}
+      <div
+        id={playerContainerId}
+        style={{ position: 'fixed', bottom: 0, left: '-2px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none' }}
+      />
 
       {/* 진행도 바 */}
       <div className="w-full max-w-md">
