@@ -1,7 +1,25 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import type { GameState, Playlist, AnswerRecord } from '@/types'
+import type { GameState, Playlist, Song, AnswerRecord } from '@/types'
+
+const ROUND_COUNT = 10  // 한 게임당 문제 수
+
+// Fisher-Yates 셔플: 배열을 랜덤하게 섞어 새 배열 반환
+function shuffle<T>(arr: T[]): T[] {
+  const result = [...arr]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
+
+// 플레이리스트에서 랜덤으로 n곡 추출
+function pickRandomSongs(songs: Song[], count: number): Song[] {
+  const shuffled = shuffle(songs)
+  return shuffled.slice(0, Math.min(count, shuffled.length))
+}
 
 // 정답 판정: 대소문자, 공백 무시하고 제목 또는 가수 이름 비교
 function checkAnswer(input: string, title: string, artist: string): boolean {
@@ -14,16 +32,20 @@ function checkAnswer(input: string, title: string, artist: string): boolean {
 }
 
 export function useGameState(playlist: Playlist) {
-  const [state, setState] = useState<GameState>({
-    playlist,
-    currentRound: 0,
-    totalRounds: playlist.songs.length,
-    score: 0,
-    answers: [],
-    status: 'playing',
+  const [state, setState] = useState<GameState>(() => {
+    // 게임 시작 시 랜덤으로 곡 선택
+    const songs = pickRandomSongs(playlist.songs, ROUND_COUNT)
+    return {
+      playlist: { ...playlist, songs },
+      currentRound: 0,
+      totalRounds: songs.length,
+      score: 0,
+      answers: [],
+      status: 'playing',
+    }
   })
 
-  const currentSong = playlist.songs[state.currentRound]
+  const currentSong = state.playlist.songs[state.currentRound]
 
   // 정답 제출
   const submitAnswer = useCallback(

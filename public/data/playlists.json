@@ -4,62 +4,26 @@
     "name": "K-POP 명곡 모음",
     "description": "누구나 아는 K-POP 히트곡들",
     "songs": [
-      {
-        "id": "1",
-        "title": "Dynamite",
-        "artist": "BTS",
-        "youtubeId": "gdZLi9oWNZg",
-        "playSeconds": 5
-      },
-      {
-        "id": "2",
-        "title": "FAKE LOVE",
-        "artist": "BTS",
-        "youtubeId": "7C2z4GqqS5E",
-        "playSeconds": 5
-      },
-      {
-        "id": "3",
-        "title": "Ditto",
-        "artist": "NewJeans",
-        "youtubeId": "pSUydWEqKwE",
-        "playSeconds": 5
-      },
-      {
-        "id": "4",
-        "title": "Hype Boy",
-        "artist": "NewJeans",
-        "youtubeId": "H3MKZZI9yjI",
-        "playSeconds": 5
-      },
-      {
-        "id": "5",
-        "title": "LALALA",
-        "artist": "Y2K",
-        "youtubeId": "3f7muJJGlPk",
-        "playSeconds": 5
-      },
-      {
-        "id": "6",
-        "title": "Cupid",
-        "artist": "FIFTY FIFTY",
-        "youtubeId": "Np1KULObMZE",
-        "playSeconds": 5
-      },
-      {
-        "id": "7",
-        "title": "MONEY",
-        "artist": "LISA",
-        "youtubeId": "x3UMBOCbZos",
-        "playSeconds": 5
-      },
-      {
-        "id": "8",
-        "title": "After LIKE",
-        "artist": "IVE",
-        "youtubeId": "F0B7HDiY-10",
-        "playSeconds": 5
-      }
+      { "id": "k1", "title": "Dynamite", "artist": "BTS", "youtubeId": "gdZLi9oWNZg", "playSeconds": 5 },
+      { "id": "k2", "title": "FAKE LOVE", "artist": "BTS", "youtubeId": "7C2z4GqqS5E", "playSeconds": 5 },
+      { "id": "k3", "title": "DNA", "artist": "BTS", "youtubeId": "MBdVXkSdhwU", "playSeconds": 5 },
+      { "id": "k4", "title": "Butter", "artist": "BTS", "youtubeId": "WMweEpGlu_U", "playSeconds": 5 },
+      { "id": "k5", "title": "Ditto", "artist": "NewJeans", "youtubeId": "pSUydWEqKwE", "playSeconds": 5 },
+      { "id": "k6", "title": "Hype Boy", "artist": "NewJeans", "youtubeId": "H3MKZZI9yjI", "playSeconds": 5 },
+      { "id": "k7", "title": "OMG", "artist": "NewJeans", "youtubeId": "A-vB2pBEUws", "playSeconds": 5 },
+      { "id": "k8", "title": "Cupid", "artist": "FIFTY FIFTY", "youtubeId": "Np1KULObMZE", "playSeconds": 5 },
+      { "id": "k9", "title": "MONEY", "artist": "LISA", "youtubeId": "x3UMBOCbZos", "playSeconds": 5 },
+      { "id": "k10", "title": "After LIKE", "artist": "IVE", "youtubeId": "F0B7HDiY-10", "playSeconds": 5 },
+      { "id": "k11", "title": "ELEVEN", "artist": "IVE", "youtubeId": "s_of_CVBSo0", "playSeconds": 5 },
+      { "id": "k12", "title": "Gangnam Style", "artist": "PSY", "youtubeId": "9bZkp7q19f0", "playSeconds": 5 },
+      { "id": "k13", "title": "DDU-DU DDU-DU", "artist": "BLACKPINK", "youtubeId": "IHNzOHi8sJs", "playSeconds": 5 },
+      { "id": "k14", "title": "Kill This Love", "artist": "BLACKPINK", "youtubeId": "2S7CDhbc-Ms", "playSeconds": 5 },
+      { "id": "k15", "title": "Celebrity", "artist": "IU", "youtubeId": "0-q1KafFCLU", "playSeconds": 5 },
+      { "id": "k16", "title": "LALALA", "artist": "Y2K", "youtubeId": "3f7muJJGlPk", "playSeconds": 5 },
+      { "id": "k17", "title": "TT", "artist": "TWICE", "youtubeId": "ePpPVE-GGJw", "playSeconds": 5 },
+      { "id": "k18", "title": "Cheer Up", "artist": "TWICE", "youtubeId": "c9RIqMp8jMQ", "playSeconds": 5 },
+      { "id": "k19", "title": "Next Level", "artist": "aespa", "youtubeId": "4TWR90KJl84", "playSeconds": 5 },
+      { "id": "k20", "title": "LOVE DIVE", "artist": "IVE", "youtubeId": "Y8JCNFbgMXE", "playSeconds": 5 }
     ]
   },
   {
@@ -67,41 +31,21 @@
     "name": "팝 명곡",
     "description": "전 세계가 아는 팝 히트곡",
     "songs": [
-      {
-        "id": "p1",
-        "title": "Shape of You",
-        "artist": "Ed Sheeran",
-        "youtubeId": "JGwWNGJdvx8",
-        "playSeconds": 5
-      },
-      {
-        "id": "p2",
-        "title": "Blinding Lights",
-        "artist": "The Weeknd",
-        "youtubeId": "4NRXx6U8ABQ",
-        "playSeconds": 5
-      },
-      {
-        "id": "p3",
-        "title": "Stay",
-        "artist": "Justin Bieber",
-        "youtubeId": "kTJczUoc26U",
-        "playSeconds": 5
-      },
-      {
-        "id": "p4",
-        "title": "Bad Guy",
-        "artist": "Billie Eilish",
-        "youtubeId": "DyDfgMOUjCI",
-        "playSeconds": 5
-      },
-      {
-        "id": "p5",
-        "title": "Levitating",
-        "artist": "Dua Lipa",
-        "youtubeId": "TUVcZfQe-Kw",
-        "playSeconds": 5
-      }
+      { "id": "p1", "title": "Shape of You", "artist": "Ed Sheeran", "youtubeId": "JGwWNGJdvx8", "playSeconds": 5 },
+      { "id": "p2", "title": "Perfect", "artist": "Ed Sheeran", "youtubeId": "2Vv-BfVoq4g", "playSeconds": 5 },
+      { "id": "p3", "title": "Blinding Lights", "artist": "The Weeknd", "youtubeId": "4NRXx6U8ABQ", "playSeconds": 5 },
+      { "id": "p4", "title": "Save Your Tears", "artist": "The Weeknd", "youtubeId": "XXYlFuWEuKI", "playSeconds": 5 },
+      { "id": "p5", "title": "Bad Guy", "artist": "Billie Eilish", "youtubeId": "DyDfgMOUjCI", "playSeconds": 5 },
+      { "id": "p6", "title": "Levitating", "artist": "Dua Lipa", "youtubeId": "TUVcZfQe-Kw", "playSeconds": 5 },
+      { "id": "p7", "title": "Don't Start Now", "artist": "Dua Lipa", "youtubeId": "oygrmJFkg68", "playSeconds": 5 },
+      { "id": "p8", "title": "Stay", "artist": "Justin Bieber", "youtubeId": "kTJczUoc26U", "playSeconds": 5 },
+      { "id": "p9", "title": "Sorry", "artist": "Justin Bieber", "youtubeId": "fRh_vgS2dFE", "playSeconds": 5 },
+      { "id": "p10", "title": "Uptown Funk", "artist": "Bruno Mars", "youtubeId": "OPf0YbXqDm0", "playSeconds": 5 },
+      { "id": "p11", "title": "Grenade", "artist": "Bruno Mars", "youtubeId": "Sv6dMFF_Bck", "playSeconds": 5 },
+      { "id": "p12", "title": "Rolling in the Deep", "artist": "Adele", "youtubeId": "rYEDA3JcQq0", "playSeconds": 5 },
+      { "id": "p13", "title": "Hello", "artist": "Adele", "youtubeId": "YQHsXMglC9A", "playSeconds": 5 },
+      { "id": "p14", "title": "Thank U, Next", "artist": "Ariana Grande", "youtubeId": "gl1aHhXnN1k", "playSeconds": 5 },
+      { "id": "p15", "title": "7 Rings", "artist": "Ariana Grande", "youtubeId": "QYh6mYIJG2Y", "playSeconds": 5 }
     ]
   }
 ]
