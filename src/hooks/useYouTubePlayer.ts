@@ -79,8 +79,8 @@ export function useYouTubePlayer(containerId: string): UseYouTubePlayerReturn {
     loadYouTubeApi().then(() => {
       // 숨겨진 플레이어 div가 있어야 Player를 생성할 수 있음
       const player = new window.YT.Player(containerId, {
-        height: '0',
-        width: '0',
+        height: '1',
+        width: '1',
         playerVars: {
           autoplay: 0,
           controls: 0,
