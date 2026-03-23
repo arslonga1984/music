@@ -1,0 +1,107 @@
+[
+  {
+    "id": "kpop-hits",
+    "name": "K-POP 명곡 모음",
+    "description": "누구나 아는 K-POP 히트곡들",
+    "songs": [
+      {
+        "id": "1",
+        "title": "Dynamite",
+        "artist": "BTS",
+        "youtubeId": "gdZLi9oWNZg",
+        "playSeconds": 5
+      },
+      {
+        "id": "2",
+        "title": "FAKE LOVE",
+        "artist": "BTS",
+        "youtubeId": "7C2z4GqqS5E",
+        "playSeconds": 5
+      },
+      {
+        "id": "3",
+        "title": "Ditto",
+        "artist": "NewJeans",
+        "youtubeId": "pSUydWEqKwE",
+        "playSeconds": 5
+      },
+      {
+        "id": "4",
+        "title": "Hype Boy",
+        "artist": "NewJeans",
+        "youtubeId": "H3MKZZI9yjI",
+        "playSeconds": 5
+      },
+      {
+        "id": "5",
+        "title": "LALALA",
+        "artist": "Y2K",
+        "youtubeId": "3f7muJJGlPk",
+        "playSeconds": 5
+      },
+      {
+        "id": "6",
+        "title": "Cupid",
+        "artist": "FIFTY FIFTY",
+        "youtubeId": "Np1KULObMZE",
+        "playSeconds": 5
+      },
+      {
+        "id": "7",
+        "title": "MONEY",
+        "artist": "LISA",
+        "youtubeId": "x3UMBOCbZos",
+        "playSeconds": 5
+      },
+      {
+        "id": "8",
+        "title": "After LIKE",
+        "artist": "IVE",
+        "youtubeId": "F0B7HDiY-10",
+        "playSeconds": 5
+      }
+    ]
+  },
+  {
+    "id": "pop-classics",
+    "name": "팝 명곡",
+    "description": "전 세계가 아는 팝 히트곡",
+    "songs": [
+      {
+        "id": "p1",
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "youtubeId": "JGwWNGJdvx8",
+        "playSeconds": 5
+      },
+      {
+        "id": "p2",
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "youtubeId": "4NRXx6U8ABQ",
+        "playSeconds": 5
+      },
+      {
+        "id": "p3",
+        "title": "Stay",
+        "artist": "Justin Bieber",
+        "youtubeId": "kTJczUoc26U",
+        "playSeconds": 5
+      },
+      {
+        "id": "p4",
+        "title": "Bad Guy",
+        "artist": "Billie Eilish",
+        "youtubeId": "DyDfgMOUjCI",
+        "playSeconds": 5
+      },
+      {
+        "id": "p5",
+        "title": "Levitating",
+        "artist": "Dua Lipa",
+        "youtubeId": "TUVcZfQe-Kw",
+        "playSeconds": 5
+      }
+    ]
+  }
+]
