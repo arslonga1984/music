@@ -1,16 +1,9 @@
 import type { Playlist } from '@/types'
 import { PlaylistCard } from '@/components/PlaylistCard'
-
-async function getPlaylists(): Promise<Playlist[]> {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'}/data/playlists.json`,
-    { cache: 'no-store' }
-  )
-  return res.json()
-}
+import playlistsData from '../../public/data/playlists.json'
 
 export default async function HomePage() {
-  const playlists = await getPlaylists()
+  const playlists = playlistsData as Playlist[]
 
   return (
     <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-6">
